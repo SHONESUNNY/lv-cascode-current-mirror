@@ -19,13 +19,13 @@ To address these issues, **cascode and low-voltage cascode structures** are used
 
 ---
 
-##  Simple/Conventional Curent Mirror
+##  Conventional cascode Curent Mirror
 
-The conventional current mirror consists of **two NMOS transistors** (typically M1 and M2).
+The conventional current mirror consists of **three NMOS transistors** (typically M1 and M2).
 - Simple and compact
 , Low power consumption
 , Easy to implement
-- Low output resistance (~tens of kΩ)
+- Low output resistance (~ kΩ)
 , Requires high voltage headroom: V<sub>GS</sub> + V<sub>DS(sat)</sub>
 , Affected by channel length modulation (λ ≠ 0) ,
 Limited precision for analog applications
@@ -34,7 +34,7 @@ Limited precision for analog applications
 ![Simple Mirror Schematic](https://github.com/user-attachments/assets/3ae72718-4e3f-44d0-ad52-0d0654cdde01)
 
 ##  Output
-![Simple Mirror Output](https://github.com/user-attachments/assets/2ec1b732-8d0e-4806-aa48-2447b7e9586e)
+![Simple Mirror Output](./cascodemirror_outputw.png)
 
 ---
 
@@ -56,11 +56,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 ![LVCCM Schematic](https://github.com/user-attachments/assets/6ab8211a-5364-4a29-ab8f-4c9ccc638119)
 
 ## Output Waveform
-![LVCCM Output](https://github.com/user-attachments/assets/c5353b65-1c7d-47f2-9696-c786e603f620)
-
-## Zoomed-in Analysis
-![LVCCM Zoomed Output](https://github.com/user-attachments/assets/a6edf337-26ef-4126-83f1-e93947362fcf)
-
+<img src="./wideswing_cascode_outputwaveform.png" alt="LVCCM Output" width="600" height="550"/>
 ---
 
 ##  Comparison Table
@@ -68,7 +64,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 | Feature                        | Conventional Current Mirror | LV Cascode Current Mirror |
 |-------------------------------|-----------------------------|----------------------------|
 | **Structure**                 | 3 NMOS                      | 4 NMOS + Biasing           |
-| **Output Resistance**         | Low (10s of kΩ)             | High (100s of kΩ – MΩ)     |
+| **Output Resistance**         | Low ( ~kΩ)                 |             ~120kohms    |
 | **Voltage Headroom Required** | High (V<sub>GS</sub> + V<sub>DS(sat)</sub>) | Low (better for LV CMOS)   |
 | **Channel Length Modulation** | Significant                 | Strongly suppressed        |
 | **Current Replication Accuracy** | Moderate                | High                       |
