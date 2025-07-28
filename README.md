@@ -1,40 +1,36 @@
-# 🔄 Low Voltage Cascode Current Mirror vs Conventional Current Mirror
+# Low Voltage Cascode Current Mirror vs Conventional Current Mirror
 
 This project presents the **design**, **simulation**, and **performance comparison** of two commonly used current mirrors in analog circuit design:
 
-- ✅ **Basic (Conventional) Current Mirror**
-- ✅ **Low Voltage Cascode Current Mirror (LVCCM)**
-
-Both circuits are implemented and simulated using **LTspice** to analyze their performance across key analog parameters.
-
+- **Basic (Conventional) Current Mirror**
+- **Low Voltage Cascode Current Mirror (LVCCM)**
+---
+  Tools Used: LTspice XVII
 ---
 
-## 📚 Theoretical Background
 
-### 📌 What is a Current Mirror?
+##  THEORY
+
+###  What is a Current Mirror?
 A current mirror is a circuit designed to **copy (or mirror)** a current from one active device to another, maintaining a **constant current** regardless of the loading. Current mirrors are fundamental in analog integrated circuits for **biasing**, **active loads**, and **signal processing**.
 
-### ⚠️ Why Improve the Basic Mirror?
+### ⚠ Why Improve the Basic Mirror?
 The basic current mirror, while simple, suffers from **low output resistance** and is sensitive to **channel length modulation**, which leads to **inaccurate current copying**, especially in low-voltage or high-gain environments.
 
 To address these issues, **cascode and low-voltage cascode structures** are used to improve accuracy, **reduce output conductance**, and make the mirror suitable for **modern low-voltage CMOS technologies**.
 
 ---
 
-## 🔧 Simple (Conventional) Current Mirror
+##  Simple/Conventional Curent Mirror
 
 The conventional current mirror consists of **two NMOS transistors** (typically M1 and M2).
-
-### ✅ Advantages
 - Simple and compact
-- Low power consumption
-- Easy to implement
-
-### ❌ Limitations
+, Low power consumption
+, Easy to implement
 - Low output resistance (~tens of kΩ)
-- Requires high voltage headroom: V<sub>GS</sub> + V<sub>DS(sat)</sub>
-- Affected by channel length modulation (λ ≠ 0)
-- Limited precision for analog applications
+, Requires high voltage headroom: V<sub>GS</sub> + V<sub>DS(sat)</sub>
+, Affected by channel length modulation (λ ≠ 0) ,
+Limited precision for analog applications
 
 ### 📷 Schematic
 ![Simple Mirror Schematic](https://github.com/user-attachments/assets/3ae72718-4e3f-44d0-ad52-0d0654cdde01)
@@ -48,14 +44,13 @@ The conventional current mirror consists of **two NMOS transistors** (typically 
 
 The LV Cascode mirror enhances the basic structure by adding **two more NMOS transistors** and a **biasing voltage**, forming a cascode configuration.
 
-### ✅ Benefits
-- **High output resistance** (~hundreds of kΩ to MΩ)
+## Benefits
+- **High output resistance** (~hundreds of kΩ)
 - **Low voltage operation** (suited for modern CMOS tech)
-- **Accurate current replication**
+- **more Accurate current replication**
 - **Minimized channel length modulation**
 - Ideal for precision analog circuits
-
-### ❌ Trade-offs
+ **but**
 - Higher design complexity
 - Slightly increased power consumption
 
@@ -76,7 +71,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 
 | Feature                        | Conventional Current Mirror | LV Cascode Current Mirror |
 |-------------------------------|-----------------------------|----------------------------|
-| **Structure**                 | 2 NMOS                      | 4 NMOS + Biasing           |
+| **Structure**                 | 3 NMOS                      | 4 NMOS + Biasing           |
 | **Output Resistance**         | Low (10s of kΩ)             | High (100s of kΩ – MΩ)     |
 | **Voltage Headroom Required** | High (V<sub>GS</sub> + V<sub>DS(sat)</sub>) | Low (better for LV CMOS)   |
 | **Channel Length Modulation** | Significant                 | Strongly suppressed        |
@@ -95,12 +90,4 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 
 ---
 
-## 📌 Conclusion
 
-The **Low Voltage Cascode Current Mirror** significantly improves over the conventional current mirror in terms of output resistance, accuracy, and voltage compliance. It is an essential component in precision analog and low-voltage integrated circuit design.
-
----
-
-**🛠️ Tools Used:** LTspice XVII
-
-**🧠 Contributors:** [Your Name or GitHub ID]
