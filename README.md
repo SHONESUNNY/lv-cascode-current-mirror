@@ -7,12 +7,12 @@ This project presents the **design**, **simulation**, and **performance comparis
 
 ---
   Tools Used: LTspice XVII
----
+-
 
 ## What is a Current Mirror?
 A current mirror is a circuit designed to **copy (or mirror)** a current from one active device to another, maintaining a **constant current** regardless of the loading. Current mirrors are fundamental in analog integrated circuits for **biasing**, **active loads**, and **signal processing**.
 
-## ⚠ Why Improve the Basic Mirror?
+## Why Improve the Basic Mirror?
 The basic current mirror, while simple, suffers from **low output resistance** and is sensitive to **channel length modulation**, which leads to **inaccurate current copying**, especially in low-voltage or high-gain environments.
 
 To address these issues, **cascode and low-voltage cascode structures** are used to improve accuracy, **reduce output conductance**, and make the mirror suitable for **modern low-voltage CMOS technologies**.
@@ -47,7 +47,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 - **Low voltage operation** (suited for modern CMOS tech)
 - **more Accurate current replication**
 - **Minimized channel length modulation**
--  **but**
+##  **cons**:
 - Higher design complexity
 - Slightly increased power consumption
 
