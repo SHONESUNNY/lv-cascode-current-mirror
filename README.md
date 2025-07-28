@@ -65,7 +65,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 |-------------------------------|-----------------------------|----------------------------|
 | **Structure**                 | 3 NMOS                      | 4 NMOS + Biasing           |
 | **Output Resistance**         | Low ( ~kΩ)                 |             ~120kohms    |
-| **Voltage Headroom Required** | High (V<sub>GS</sub> + V<sub>DS(sat)</sub>) | Low (better for LV CMOS)   |
+| **Voltage Headroom Required** | High (V<sub>GS</sub> + 2V<sub>OV</sub>) | 2V<sub>OV</sub>   |
 | **Channel Length Modulation** | Significant                 | Strongly suppressed        |
 | **Current Replication Accuracy** | Moderate                | High                       |
 | **Power Consumption**         | Low                         | Moderate                   |
@@ -79,7 +79,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 - `Simple_Mirror.asc` – LTspice schematic of basic current mirror
 - `LV_Cascode_Mirror.asc` – LTspice schematic of cascode mirror
 - Simulation results (screenshots above)
-
+-**References** - Bezaad Razavi
 ---
 
 
