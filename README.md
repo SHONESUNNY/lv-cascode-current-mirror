@@ -30,15 +30,15 @@ The conventional current mirror consists of **two NMOS transistors** (typically 
 , Affected by channel length modulation (λ ≠ 0) ,
 Limited precision for analog applications
 
-### 📷 Schematic
+##  Schematic
 ![Simple Mirror Schematic](https://github.com/user-attachments/assets/3ae72718-4e3f-44d0-ad52-0d0654cdde01)
 
-### 📊 Output
+##  Output
 ![Simple Mirror Output](https://github.com/user-attachments/assets/2ec1b732-8d0e-4806-aa48-2447b7e9586e)
 
 ---
 
-## ⚙️ Low Voltage Cascode Current Mirror (LVCCM)
+##  Low Voltage Cascode Current Mirror (LVCCM)
 
 The LV Cascode mirror enhances the basic structure by adding **two more NMOS transistors** and a **biasing voltage**, forming a cascode configuration.
 
@@ -47,25 +47,23 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 - **Low voltage operation** (suited for modern CMOS tech)
 - **more Accurate current replication**
 - **Minimized channel length modulation**
-- Ideal for precision analog circuits
- **but**
+-  **but**
 - Higher design complexity
 - Slightly increased power consumption
 
-### 📷 Schematic & Outputs
 
-#### 🖼️ Schematic
+#  Schematic
 ![LVCCM Schematic](https://github.com/user-attachments/assets/6ab8211a-5364-4a29-ab8f-4c9ccc638119)
 
-#### 📈 Output Waveform
+## Output Waveform
 ![LVCCM Output](https://github.com/user-attachments/assets/c5353b65-1c7d-47f2-9696-c786e603f620)
 
-#### 🔍 Zoomed-in Analysis
+## Zoomed-in Analysis
 ![LVCCM Zoomed Output](https://github.com/user-attachments/assets/a6edf337-26ef-4126-83f1-e93947362fcf)
 
 ---
 
-## 📊 Comparison Table
+##  Comparison Table
 
 | Feature                        | Conventional Current Mirror | LV Cascode Current Mirror |
 |-------------------------------|-----------------------------|----------------------------|
@@ -80,7 +78,7 @@ The LV Cascode mirror enhances the basic structure by adding **two more NMOS tra
 
 ---
 
-## 📁 Files Included
+# Files Included
 
 - `Simple_Mirror.asc` – LTspice schematic of basic current mirror
 - `LV_Cascode_Mirror.asc` – LTspice schematic of cascode mirror
